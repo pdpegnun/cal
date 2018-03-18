@@ -1,26 +1,33 @@
-<!DOCTYPE html><html><head>
-<title>Calculator</title><meta charset="utf-8">
-<script type="text/javascript">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function cube() {
+			var num = document.getElementById("n1");
+			num.value = Math.pow(num.value, 3);
+		}
 
-function inverse() {
-  var num = document.getElementById("n1");
-  num.value = 1/num.value;
-}
+		function sin() {
+			var num = document.getElementById("n1");
+			num.value = Math.sin(num.value);
+		}
 
-function square() {
-  var num = document.getElementById("n1");
-  num.value = num.value * num.value;
-}
-</script>
+		function potencia4() {
+			var num = document.getElementById("n1");
+			num.value = Math.pow(num.value, 4);
+		}	
+	</script>
 </head>
 
-<h3>My Calculator</h3>
-
 <body>
-  Number:
-  <input type="text" id="n1"><p>
-
-  <button onclick="inverse()"> 1/x </button>
-  <button onclick="square()"> x<sup>2</sup> </button>
+	<h1>Calculadora de Pedro Daniel Peguero</h1>
+	Number:
+	<input type="text" id="n1"><p>
+	<button onclick="cube()"> x^3 </button>
+	<button onclick="potencia4()"> x^4 </button>
+	<button onclick="sin()"> sin(x) </button>
 </body>
+
 </html>
